@@ -1,0 +1,700 @@
+import cougarIdle from '../../sprites/cougar/idle.png';
+import cougarLeft from '../../sprites/cougar/pickLeft.png';
+import cougarRunLeft from '../../sprites/cougar/pickRunLeft.png';
+import cougarRight from '../../sprites/cougar/pickRight.png';
+import cougarRunRight from '../../sprites/cougar/pickRunRight.png';
+
+import momIdle from '../../sprites/mom/happy.webp';
+import momLeft from '../../sprites/mom/pickLeft.png';
+import momRunLeft from '../../sprites/mom/pickRunLeft.png';
+import momRight from '../../sprites/mom/pickRight.png';
+import momRunRight from '../../sprites/mom/pickRunRight.png';
+
+import dadIdle from '../../sprites/dad/happy.webp';
+import dadLeft from '../../sprites/dad/pickLeft.png';
+import dadRunLeft from '../../sprites/dad/pickRunLeft.png';
+import dadRight from '../../sprites/dad/pickRight.png';
+import dadRunRight from '../../sprites/dad/pickRunRight.png';
+
+import bunnyIdle from '../../sprites/bunny/idle.png';
+import bunnyLeft from '../../sprites/bunny/pickLeft.png';
+import bunnyRunLeft from '../../sprites/bunny/pickRunLeft.png';
+import bunnyRight from '../../sprites/bunny/pickRight.png';
+import bunnyRunRight from '../../sprites/bunny/pickRunRight.png';
+
+import birdIdle from '../../sprites/bird/idle.webp';
+import birdLeft from '../../sprites/bird/pickLeft.png';
+import birdRunLeft from '../../sprites/bird/pickRunLeft.png';
+import birdRight from '../../sprites/bird/pickRight.png';
+import birdRunRight from '../../sprites/bird/pickRunRight.png';
+
+import monkeyIdle from '../../sprites/monkey/idle.png';
+import monkeyLeft from '../../sprites/monkey/pickLeft.png';
+import monkeyRunLeft from '../../sprites/monkey/pickRunLeft.png';
+import monkeyRight from '../../sprites/monkey/pickRight.png';
+import monkeyRunRight from '../../sprites/monkey/pickRunRight.png';
+
+const data = {
+	instructions: {
+		title: 'instrucciones',
+		message: `La tormenta se acerca y aún quedan frutas por recoger. 
+    Pasa el mouse por encima de cualquier animal y luego haz clic en una fruta para que la recoja. 
+    ¡Recolecta todas las frutas antes de que se acabe el tiempo!`,
+		buttonText: 'Jugar',
+	},
+	sprites: [
+		{
+			id: 0,
+			name: 'mom',
+			fruit: 'blueberry',
+			fruitPosition: [-1, 1.7, 0],
+			fruitInitialScale: 1.1,
+			hover: true,
+			indexExpression: 0,
+			rightCustomExpressionStep: {
+				4: 3,
+			},
+			expressions: [
+				{
+					src: momIdle,
+					size: [2, 2.2],
+					position: [2, 1.2, 3],
+					positionCarryingFruit: [1, -2, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 3,
+					totalTiles: 10,
+					frames: 10,
+				},
+				{
+					src: momLeft,
+					size: [2, 2.2],
+					position: [2, 1.2, 3],
+					positionCarryingFruit: [1, -2, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 5,
+					totalTiles: 20,
+					frames: 10,
+				},
+				{
+					src: momRight,
+					size: [2, 2.2],
+					position: [2, 1.2, 3],
+					positionCarryingFruit: [1, -2, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 5,
+					totalTiles: 20,
+					frames: 13,
+				},
+				{
+					src: momRunLeft,
+					size: [1.74, 2.2],
+					position: [2, 1.2, 3],
+					positionCarryingFruit: [1, -2, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 4,
+					totalTiles: 16,
+					frames: 16,
+				},
+				{
+					src: momRunRight,
+					size: [1.74, 2.2],
+					position: [2, 1.2, 3],
+					positionCarryingFruit: [1, -2, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 4,
+					totalTiles: 16,
+					frames: 16,
+				},
+			],
+		},
+		{
+			id: 1,
+			name: 'dad',
+			fruit: 'orange',
+			fruitPosition: [-1, 1.6, 0],
+			fruitInitialScale: 0.8,
+			hover: true,
+			indexExpression: 0,
+			leftCustomExpressionStep: {
+				4: 4,
+			},
+			expressions: [
+				{
+					src: dadIdle,
+					size: [2, 2.2],
+					position: [-2, 1.2, 3],
+					positionCarryingFruit: [1, -1.8, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 5,
+					tilesVertical: 3,
+					totalTiles: 12,
+					frames: 12,
+				},
+				{
+					src: dadLeft,
+					size: [2.4, 2.2],
+					position: [-2, 1.2, 3],
+					positionCarryingFruit: [1, -1.8, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 5,
+					totalTiles: 20,
+					frames: 13,
+				},
+				{
+					src: dadRight,
+					size: [2.4, 2.2],
+					position: [-2, 1.2, 3],
+					positionCarryingFruit: [1, -1.8, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 5,
+					totalTiles: 20,
+					frames: 13,
+				},
+				{
+					src: dadRunLeft,
+					size: [2.8, 2],
+					position: [-2, 1.2, 3],
+					positionCarryingFruit: [1, -1.8, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 4,
+					totalTiles: 16,
+					frames: 16,
+				},
+				{
+					src: dadRunRight,
+					size: [2.8, 2],
+					position: [-2, 1.2, 3],
+					positionCarryingFruit: [1, -1.8, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 4,
+					totalTiles: 16,
+					frames: 16,
+				},
+			],
+		},
+		{
+			id: 2,
+			name: 'bunny',
+			fruit: 'strawberry',
+			fruitPosition: [-0.4, 1.1, 0],
+			fruitInitialScale: 0.8,
+			hover: true,
+			indexExpression: 0,
+			leftCustomExpressionStep: {
+				0: 4,
+				1: 2,
+			},
+			rightCustomExpressionStep: {
+				4: 3,
+			},
+			expressions: [
+				{
+					src: bunnyIdle,
+					size: [2, 2],
+					position: [5, 0.6, 0],
+					positionCarryingFruit: [0.5, -1.4, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 3,
+					totalTiles: 10,
+					frames: 10,
+				},
+				{
+					src: bunnyLeft,
+					size: [2, 2],
+					position: [5, 0.6, 0],
+					positionCarryingFruit: [0.2, -1.4, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 5,
+					totalTiles: 20,
+					frames: 13,
+				},
+				{
+					src: bunnyRight,
+					size: [2, 2],
+					position: [5, 0.6, 0],
+					positionCarryingFruit: [0.5, -1.4, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 5,
+					totalTiles: 20,
+					frames: 13,
+				},
+				{
+					src: bunnyRunLeft,
+					size: [1.4, 1.15],
+					position: [5, 0.6, 0],
+					positionCarryingFruit: [0.2, -1.4, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 4,
+					totalTiles: 16,
+					frames: 16,
+				},
+				{
+					src: bunnyRunRight,
+					size: [1.4, 1.15],
+					position: [5, 0.6, 0],
+					positionCarryingFruit: [0.5, -1.4, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 4,
+					totalTiles: 16,
+					frames: 16,
+				},
+			],
+		},
+		{
+			id: 3,
+			name: 'cougar',
+			fruit: 'peach',
+			fruitPosition: [-0.1, 1.1, 0],
+			fruitInitialScale: 0.7,
+			hover: true,
+			indexExpression: 0,
+			leftCustomExpressionStep: {
+				0: 4,
+				1: 2,
+			},
+			rightCustomExpressionStep: {
+				4: 3,
+			},
+			expressions: [
+				{
+					src: cougarIdle,
+					size: [2.5, 2],
+					position: [4, 0.8, 1.5],
+					positionCarryingFruit: [0.2, -1.4, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 4,
+					totalTiles: 16,
+					frames: 16,
+				},
+				{
+					src: cougarLeft,
+					size: [2.5, 2],
+					position: [4, 0.8, 1.5],
+					positionCarryingFruit: [-0.7, -1.3, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 5,
+					totalTiles: 20,
+					frames: 13,
+				},
+				{
+					src: cougarRight,
+					size: [2.5, 2],
+					position: [4, 0.8, 1.5],
+					positionCarryingFruit: [0.8, -1.3, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 5,
+					totalTiles: 20,
+					frames: 13,
+				},
+				{
+					src: cougarRunLeft,
+					size: [2.5, 1.1],
+					position: [4, 0.8, 1.5],
+					positionCarryingFruit: [-0.7, -1.3, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 4,
+					totalTiles: 16,
+					frames: 16,
+				},
+				{
+					src: cougarRunRight,
+					size: [2.5, 1.1],
+					position: [4, 0.8, 1.5],
+					positionCarryingFruit: [0.8, -1.3, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 4,
+					totalTiles: 16,
+					frames: 16,
+				},
+			],
+		},
+		{
+			id: 4,
+			name: 'bird',
+			fruit: 'apple',
+			fruitPosition: [-1, 1.3, 0],
+			fruitInitialScale: 0.6,
+			hover: true,
+			indexExpression: 0,
+			leftCustomExpressionStep: {
+				4: 4,
+			},
+			rightCustomExpressionStep: {
+				0: 3,
+				1: 1,
+			},
+			expressions: [
+				{
+					src: birdIdle,
+					size: [1.8, 1.8],
+					position: [-5, 0.9, 0],
+					positionCarryingFruit: [0, 0, 0],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 2,
+					totalTiles: 8,
+					frames: 8,
+				},
+				{
+					src: birdLeft,
+					size: [1.8, 1.8],
+					position: [-5, 0.9, 0],
+					positionCarryingFruit: [0.6, -1.5, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 5,
+					totalTiles: 20,
+					frames: 13,
+				},
+				{
+					src: birdRight,
+					size: [1.8, 1.8],
+					position: [-5, 0.9, 0],
+					positionCarryingFruit: [1.4, -1.5, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 5,
+					totalTiles: 20,
+					frames: 13,
+				},
+				{
+					src: birdRunLeft,
+					size: [2.2, 1.8],
+					position: [-5, 0.9, 0],
+					positionCarryingFruit: [0.6, -1.5, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 4,
+					totalTiles: 16,
+					frames: 16,
+				},
+				{
+					src: birdRunRight,
+					size: [2.2, 1.8],
+					position: [-5, 0.9, 0],
+					positionCarryingFruit: [1.4, -1.5, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 4,
+					totalTiles: 16,
+					frames: 16,
+				},
+			],
+		},
+		{
+			id: 5,
+			name: 'monkey',
+			fruit: 'strawberry',
+			fruitPosition: [-1, 1.3, 0],
+			fruitInitialScale: 0.8,
+			hover: true,
+			indexExpression: 0,
+			leftCustomExpressionStep: {
+				4: 4,
+			},
+			rightCustomExpressionStep: {
+				0: 3,
+				1: 1,
+			},
+			expressions: [
+				{
+					src: monkeyIdle,
+					size: [2, 2],
+					position: [-4, 1, 1.5],
+					positionCarryingFruit: [0, 0, 0],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 3,
+					totalTiles: 12,
+					frames: 12,
+				},
+				{
+					src: monkeyLeft,
+					size: [2, 1.9],
+					position: [-4, 1, 1.5],
+					positionCarryingFruit: [1, -0.5, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 5,
+					totalTiles: 20,
+					frames: 13,
+				},
+				{
+					src: monkeyRight,
+					size: [2, 1.9],
+					position: [-4, 1, 1.5],
+					positionCarryingFruit: [1, -0.5, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 5,
+					totalTiles: 20,
+					frames: 13,
+				},
+				{
+					src: monkeyRunLeft,
+					size: [1.8, 1.6],
+					position: [-4, 1, 1.5],
+					positionCarryingFruit: [1, -0.5, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 4,
+					totalTiles: 16,
+					frames: 16,
+				},
+				{
+					src: monkeyRunRight,
+					size: [1.8, 1.6],
+					position: [-4, 1, 1.5],
+					positionCarryingFruit: [1, -0.5, 0.2],
+					rotation: [0, 3, 0],
+					tilesHorizontal: 4,
+					tilesVertical: 4,
+					totalTiles: 16,
+					frames: 16,
+				},
+			],
+		},
+	],
+	models: [
+		{
+			name: 'blueberry',
+			path: '/models/fruit/Arandano.glb',
+			geometry: 'Blueberry',
+			material: 'Blueberry.001',
+			positions: [
+				[4, 2, 5],
+				[3, 2, 5],
+				[4.5, 1.5, 5],
+				[3.5, 1.5, 5],
+				[4, 1, 5],
+				[3, 1, 5],
+			],
+			positionsBasket: [
+				[0.6, 0.2, -0.2],
+				[0.6, 0.2, -0.45],
+				[0.6, 0.2, -0.7],
+				[0.6, 0.45, -0.25],
+				[0.6, 0.45, -0.5],
+				[0.6, 0.45, -0.75],
+			],
+			scaleBasket: 0.85,
+		},
+
+		{
+			name: 'peach',
+			path: '/models/fruit/Durazno.glb',
+			geometry: 'Peach',
+			material: 'Peach',
+			positions: [
+				[4, 4, 4.7],
+				[3.3, 4, 5],
+				[4.5, 3.5, 4.7],
+				[3.5, 3.5, 4.7],
+				[4, 3, 4.7],
+				[3, 3, 4.7],
+			],
+			positionsBasket: [
+				[0.3, 0.2, -0.05],
+				[0.3, 0.2, -0.35],
+				[0.3, 0.2, -0.65],
+				[0.3, 0.2, -0.95],
+				[0.3, 0.45, -0.2],
+				[0.3, 0.45, -0.5],
+			],
+			scaleBasket: 0.65,
+		},
+
+		{
+			name: 'strawberry',
+			path: '/models/fruit/Fresa.glb',
+			child: [
+				{
+					geometry: 'Strawberry-Strawberry',
+					material: 'Strawberry.001',
+				},
+				{
+					geometry: 'Strawberry-Stub',
+					material: 'Stub.001',
+				},
+			],
+			positions: [
+				[-6, 2.7, 5.5],
+				[-6.5, 2.7, 5.5],
+				[-6.2, 2.2, 5.8],
+				[-5.5, 2.2, 5.8],
+				[-5.7, 1.5, 5.8],
+				[-6.1, 1.3, 5.8],
+			],
+			positionsBasket: [
+				[0.05, 0.2, 0.1],
+				[0.05, 0.2, -0.15],
+				[0.05, 0.2, -0.4],
+				[0.05, 0.2, -0.65],
+				[0.05, 0.2, -0.9],
+				[0.05, 0.2, -1.15],
+			],
+			scaleBasket: 0.8,
+		},
+
+		{
+			name: 'apple',
+			path: '/models/fruit/Manzana.glb',
+			child: [
+				{
+					geometry: 'Apple-Apple',
+					material: 'Apple.002',
+				},
+				{
+					geometry: 'Apple-Stub',
+					material: 'Stub.002',
+				},
+			],
+			positions: [
+				[-6, 4, 5.5],
+				[-6.5, 4, 5],
+				[-6.5, 4.8, 5.5],
+				[-7.5, 4.8, 5.5],
+				[-7.3, 4.4, 5.1],
+				[-8, 4.4, 5.1],
+			],
+			positionsBasket: [
+				[-0.2, 0.2, -0.1],
+				[-0.2, 0.2, -0.4],
+				[-0.2, 0.2, -0.7],
+				[-0.2, 0.2, -1],
+				[-0.2, 0.4, -0.2],
+				[-0.2, 0.4, -0.5],
+			],
+			scaleBasket: 0.6,
+		},
+
+		{
+			name: 'blackberry',
+			path: '/models/fruit/Mora.glb',
+			geometry: 'Blackberry-Blackberry_mat',
+			material: 'Blackberry_mat',
+			positions: [
+				[5, 1, 4.5],
+				[5.5, 1, 4.5],
+				[5.8, 0.5, 4.5],
+				[6.2, 0.5, 4.5],
+				[5.3, 0.5, 4.5],
+				[4.8, 0.5, 4.5],
+			],
+			positionsBasket: [
+				[-0.45, 0.2, -0.2],
+				[-0.45, 0.2, -0.4],
+				[-0.45, 0.2, -0.6],
+				[-0.45, 0.2, -0.8],
+				[-0.45, 0.2, -1],
+				[-0.45, 0.4, -0.3],
+			],
+			scaleBasket: 0.6,
+		},
+
+		{
+			name: 'orange',
+			path: '/models/fruit/Naranja.glb',
+			geometry: 'Orange',
+			material: 'Orange',
+			positions: [
+				[-4, 2.7, 5.5],
+				[-3.7, 3.2, 5.3],
+				[-3.2, 3.5, 5.5],
+				[-4.5, 2.2, 5.5],
+				[-4, 2.2, 5.5],
+				[-4.5, 1.6, 5.2],
+			],
+			positionsBasket: [
+				[-0.65, 0.3, -0.4],
+				[-0.65, 0.3, -0.65],
+				[-0.65, 0.3, -0.9],
+				[-0.65, 0.5, -0.45],
+				[-0.65, 0.5, -0.7],
+				[-0.65, 0.5, -0.95],
+			],
+			scaleBasket: 0.5,
+		},
+	],
+	modelsFruitsBasket: [
+		{
+			name: 'apple',
+			path: '/models/fruit/Manzana.glb',
+			child: [
+				{
+					geometry: 'Apple-Apple',
+					material: 'Apple.002',
+				},
+				{
+					geometry: 'Apple-Stub',
+					material: 'Stub.002',
+				},
+			],
+			positions: [[-0.1, 0.5, 0.1]],
+		},
+		{
+			name: 'blackberry',
+			path: '/models/fruit/Mora.glb',
+			geometry: 'Blackberry-Blackberry_mat',
+			material: 'Blackberry_mat',
+			positions: [[0.2, 0.7, -0.3]],
+		},
+		{
+			name: 'orange',
+			path: '/models/fruit/Naranja.glb',
+			geometry: 'Orange',
+			material: 'Orange',
+			positions: [[-0.2, 0.9, -0.5]],
+		},
+		{
+			name: 'peach',
+			path: '/models/fruit/Durazno.glb',
+			geometry: 'Peach',
+			material: 'Peach',
+			positions: [[0.4, 0.5, 0]],
+		},
+		{
+			name: 'blueberry',
+			path: '/models/fruit/Arandano.glb',
+			geometry: 'Blueberry',
+			material: 'Blueberry.001',
+			positions: [[0.3, 0.7, 0.3]],
+		},
+		{
+			name: 'strawberry',
+			path: '/models/fruit/Fresa.glb',
+			child: [
+				{
+					geometry: 'Strawberry-Strawberry',
+					material: 'Strawberry.001',
+				},
+				{
+					geometry: 'Strawberry-Stub',
+					material: 'Stub.001',
+				},
+			],
+			positions: [[-0.5, 0.7, 0]],
+		},
+	],
+};
+
+export { data };

@@ -1,0 +1,64 @@
+@font-face {
+	font-family: 'Dimbo';
+	src: local('Dimbo'),
+			url('/src/assets/Fonts/DimboRegular.ttf') format('truetype');
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	touch-action: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.inactive {
+	filter: grayscale(1);
+}
+
+.pointer {
+	cursor: url('./assets/img/Login/Puntero.webp') 15 10, auto;
+}
+
+.react-player {
+	position: absolute;
+	border-top-left-radius: 6rem;
+	border-top-right-radius: 6rem;
+	overflow: hidden;
+}
+
+.toolTip {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: dimgray;	
+	color: white;
+	padding: 10px;
+	border-radius: 35px;
+	letter-spacing: 2px;
+	font-family: 'Dimbo';
+	font-size: 1.2rem;
+}
+
+.spacetooltip {
+	margin-left: 35%;
+}
+
+.pointerClawUp {
+	cursor: url('./sprites/cursor/PiaHandOpen.webp'), auto;
+}
+
+.pointerClawDown {
+	cursor: url('./sprites/cursor/PiaHandClosed.webp'), auto;
+}

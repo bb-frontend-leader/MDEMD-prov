@@ -1,0 +1,12 @@
+{
+	"base-url": "https://run.mocky.io/v3",
+	"background-theme-volume": 0.15,
+	"scene": {
+		"light-intensity": 0.5,
+		"camera": {
+			"position": [ 0.9803134977951506 , 3.180471062422333,  -11.989070007194305],
+			"rotation": [-2.862489971457836, 0.09912821852983106, 3.1132382890558694],
+			"fov": 50
+		}
+	}
+}

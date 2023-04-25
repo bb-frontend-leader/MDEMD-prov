@@ -1,0 +1,13 @@
+{
+	"base-url": "https://run.mocky.io/v3",
+	"background-theme-volume": 0.15,
+	"scene": {
+		"light-intensity": 0.5,
+		"camera": {
+			"position": [-19, 10.5, 17.19],
+			"rotation": [-0.242069095980721,-0.002709784953037311,-0.000656701740623211],
+			"fov": 45
+		},
+		"background-image": "../../assets/img/SeleccionAvatar/fondo.webp"
+	}
+}

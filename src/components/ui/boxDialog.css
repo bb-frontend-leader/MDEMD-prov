@@ -1,0 +1,5 @@
+@font-face {
+    font-family: 'Dimbo';
+    src: local('Dimbo'),
+        url('../../assets/Fonts/DimboRegular.ttf') format('truetype');
+}
